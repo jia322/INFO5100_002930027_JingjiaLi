@@ -27,7 +27,7 @@
             </Button>
             <Pane fx:id="show" prefHeight="85.0" prefWidth="1043.0">
                <children>
-                  <Text fill="#6f5858" layoutX="-49.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image Management Tool" wrappingWidth="395.22900390625">
+                  <Text fill="#6f5858" layoutX="8.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image Management Tool" wrappingWidth="513.22900390625">
                      <font>
                         <Font size="32.0" />
                      </font>

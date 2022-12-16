@@ -221,11 +221,15 @@ public class ImageController implements Initializable {
     }
 
     public void onClick_rotateX(ActionEvent e) {
+        img.setRotationAxis(Rotate.Z_AXIS);
         img.setRotate(img.getRotate() + 90);
+//        VBox.setVgrow(stackPane,Priority.ALWAYS);
     }
 
     public void onClick_rotateY(ActionEvent e) {
+        img.setRotationAxis(Rotate.Z_AXIS);
         img.setRotate(img.getRotate() - 90);
+//        VBox.setVgrow(stackPane,Priority.ALWAYS);
     }
 
     public void onClick_flipY(ActionEvent e) {
