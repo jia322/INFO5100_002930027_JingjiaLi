@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="de.mhus.ports.javaxt" type="repository">
+    <properties maven-id="de.mhus.ports:ports-javaxt:1.3.6" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/mhus/ports/ports-javaxt/1.3.6/ports-javaxt-1.3.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" styleClass="root" stylesheets="@image-stylesheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.final_project.ImageController">
+   <top>
+      <HBox prefHeight="85.0" prefWidth="1200.0" styleClass="root" stylesheets="@image-stylesheet.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="upload_button" mnemonicParsing="false" prefHeight="90.0" prefWidth="74.0" styleClass="upload_button" textFill="#f2f2f2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Pane fx:id="show" prefHeight="85.0" prefWidth="1043.0">
+               <children>
+                  <Text fill="#6f5858" layoutX="-49.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image Management Tool" wrappingWidth="395.22900390625">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button fx:id="close" mnemonicParsing="false" onAction="#onClick_close" prefHeight="90.0" prefWidth="74.0" styleClass="upload_button" textFill="#f2f2f2">
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@删除_delete-three.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox fx:id="left_pane" prefHeight="565.0" prefWidth="379.0" styleClass="left_pane" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="left_pane1" prefHeight="565.0" prefWidth="379.0" styleClass="left_pane">
+               <children>
+                  <Text fill="#a18282" strokeType="OUTSIDE" strokeWidth="0.0" text="Style &amp; Effects" textAlignment="CENTER" wrappingWidth="380.22900390625">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#a18282" layoutX="10.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="                                   " wrappingWidth="380.22900390625">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Text>
+                  <Separator prefHeight="8.0" prefWidth="381.0" />
+                  <Pane prefHeight="487.0" prefWidth="381.0">
+                     <children>
+                        <Button fx:id="upload_button23" layoutX="118.0" layoutY="43.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="161.0" styleClass="rotate" text="Resize" textFill="#6f5858">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="37.0" fitWidth="33.0" layoutX="121.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@缩放_zoom-internal.png" />
+                           </image>
+                        </ImageView>
+                        <Pane layoutX="39.0" layoutY="417.0" prefHeight="52.0" prefWidth="323.0">
+                           <children>
+                              <Button fx:id="reset" layoutX="8.0" layoutY="2.0" mnemonicParsing="false" onAction="#onClick_reset" prefHeight="48.0" prefWidth="143.0" text="Reset" textFill="#6f5858">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="rotate" />
+                                    <String fx:value="btn" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="clear" layoutX="180.0" layoutY="2.0" mnemonicParsing="false" onAction="#onClick_clear" prefHeight="48.0" prefWidth="143.0" text="Clear" textFill="#6f5858">
+                                 <font>
+                                    <Font name="Comic Sans MS Bold" size="15.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="rotate" />
+                                    <String fx:value="btn" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Slider fx:id="visible" blockIncrement="0.1" layoutX="20.0" layoutY="95.0" max="1.0" prefHeight="15.0" prefWidth="342.0" showTickMarks="true" value="1.0" />
+                        <Button fx:id="upload_button231" layoutX="136.0" layoutY="108.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="125.0" styleClass="rotate" text="Visibility" textFill="#6f5858">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="119.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@遮罩_mask-two.png" />
+                           </image>
+                        </ImageView>
+                        <Slider fx:id="glow" blockIncrement="0.1" layoutX="20.0" layoutY="157.0" max="1.0" prefHeight="15.0" prefWidth="342.0" showTickMarks="true" />
+                        <Button fx:id="upload_button2311" layoutX="128.0" layoutY="183.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="125.0" styleClass="rotate" text="Glow" textFill="#6f5858">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="120.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@光源_light.png" />
+                           </image>
+                        </ImageView>
+                        <Slider fx:id="bloom" blockIncrement="0.1" layoutX="20.0" layoutY="224.0" max="1.0" prefHeight="15.0" prefWidth="342.0" showTickMarks="true" value="1.0" />
+                        <Button fx:id="upload_button2312" layoutX="132.0" layoutY="248.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="125.0" styleClass="rotate" text="Bloom" textFill="#6f5858">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="120.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@光晕_halo.png" />
+                           </image>
+                        </ImageView>
+                        <Slider fx:id="sepia" blockIncrement="0.1" layoutX="20.0" layoutY="296.0" max="1.0" prefHeight="15.0" prefWidth="342.0" showTickMarks="true" />
+                        <Button fx:id="upload_button23121" layoutX="137.0" layoutY="321.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="125.0" styleClass="rotate" text="SepiaTone" textFill="#6f5858">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="120.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@填充_fill.png" />
+                           </image>
+                        </ImageView>
+                        <Slider fx:id="resize" blockIncrement="20.0" layoutX="20.0" layoutY="14.0" max="500.0" min="100.0" prefHeight="15.0" prefWidth="342.0" showTickMarks="true" value="100.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <HBox prefHeight="565.0" prefWidth="932.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="531.0" prefWidth="800.0" stylesheets="@image-stylesheet.css">
+               <children>
+                  <Pane fx:id="image_pane" layoutX="177.0" layoutY="121.0" prefHeight="330.0" prefWidth="500" styleClass="images">
+                     <children>
+                        <VBox fx:id="vbox" alignment="CENTER" prefHeight="330.0" prefWidth="498.0">
+                           <children>
+                              <StackPane fx:id="stackPane" alignment="CENTER" prefHeight="329.0" prefWidth="498.0">
+                                 <children>
+                                    <ImageView fx:id="img" fitHeight="100.0" fitWidth="100.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER" />
+                                 </children>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children></Pane>
+                  <Pane prefHeight="89.0" prefWidth="818.0">
+                     <children>
+                        <Button layoutX="586.0" layoutY="3.0" mnemonicParsing="false" onAction="#onClick_show" prefHeight="84.0" prefWidth="218.0" text="show" textFill="#6f5858">
+                           <graphic>
+                              <ImageView fitHeight="56.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@显示屏_display.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="upload_button" />
+                              <String fx:value="btn" />
+                           </styleClass>
+                        </Button>
+                        <MenuButton layoutX="210.0" layoutY="1.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="197.0" text="Filters" textFill="#6f5858">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#onClick_filter1" text="Grayscale" />
+                            <MenuItem mnemonicParsing="false" onAction="#onClick_filter2" text="Invert" />
+                              <MenuItem mnemonicParsing="false" onAction="#onClick_filter3" text="Saturated" />
+                          </items>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@颜色滤镜_color-filter.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="upload_button" />
+                              <String fx:value="btn" />
+                           </styleClass>
+                        </MenuButton>
+                        <MenuButton layoutX="6.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="197.0" text="Rotate" textFill="#6f5858">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#onClick_rotateX" text="Clockwise" />
+                              <MenuItem mnemonicParsing="false" onAction="#onClick_rotateY" text="Counter-clockwise" />
+                           </items>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@旋转_rotate.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="upload_button" />
+                              <String fx:value="btn" />
+                           </styleClass>
+                        </MenuButton>
+                        <MenuButton layoutX="409.0" layoutY="1.0" mnemonicParsing="false" prefHeight="90.0" prefWidth="197.0" text="Flip" textFill="#6f5858">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#onClick_flipX" text="X-AXIS" />
+                              <MenuItem mnemonicParsing="false" onAction="#onClick_flipY" text="Y-AXIS" />
+                           </items>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@水平校准_level-adjustment.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <styleClass>
+                              <String fx:value="upload_button" />
+                              <String fx:value="btn" />
+                           </styleClass>
+                        </MenuButton>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="190.0" layoutY="458.0" prefHeight="67.0" prefWidth="430.0">
+                     <children>
+                        <Button fx:id="btn_upload" layoutX="30.0" mnemonicParsing="false" onAction="#onClick_btn_up" prefHeight="69.0" prefWidth="171.0" text=" Upload" textFill="#6f5858">
+                           <graphic>
+                              <ImageView fitHeight="56.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@瞄准_aiming.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="19.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="upload_button" />
+                              <String fx:value="btn_up" />
+                           </styleClass>
+                        </Button>
+                        <Button fx:id="btn_dwload" layoutX="226.0" layoutY="-1.0" mnemonicParsing="false" onAction="#onClick_btn_down" prefHeight="69.0" prefWidth="171.0" text="Download" textFill="#6f5858">
+                           <graphic>
+                              <ImageView fitHeight="56.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@图片下载_down-picture.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="19.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="upload_button" />
+                              <String fx:value="btn_down" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="639.0" layoutY="80.0" prefHeight="252.0" prefWidth="200.0">
+                     <children>
+                        <Text fx:id="property_text" fill="#6f5858" layoutX="47.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image Properties" visible="false" wrappingWidth="127.22900390625">
+                           <font>
+                              <Font name="Comic Sans MS Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="width_text" fill="#6f5858" layoutX="56.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Width:" visible="false" wrappingWidth="140.3134765625">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="height_text" fill="#6f5858" layoutX="55.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height:" visible="false" wrappingWidth="141.169921875">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="visibility_text" fill="#6f5858" layoutX="53.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Visibility:" visible="false" wrappingWidth="145.26123046875">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="glow_text" fill="#6f5858" layoutX="55.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Glow:" visible="false" wrappingWidth="154.26123046875">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="bloom_text" fill="#6f5858" layoutX="52.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bloom:" visible="false" wrappingWidth="147.26123046875">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="sepia_text" fill="#6f5858" layoutX="51.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" SepiaTone:" visible="false" wrappingWidth="148.26123046875">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="date_text" fill="#6f5858" layoutX="54.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" visible="false" wrappingWidth="155.26123046875">
+                           <font>
+                              <Font name="Comic Sans MS" size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
